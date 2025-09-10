@@ -23,3 +23,5 @@ app = "aurum"  # must match the app name you picked in Fly.io
     timeout = "2s"
     grace_period = "5s"
     restart_limit = 0
+[build]
+  dockrefilr= "dockerfile"
