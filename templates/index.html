@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arbitrage Bot</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script>
+    async function fetchData() {
+      const response = await fetch("/data");
+      const data = await response.json();
+      document.getElementById("output").innerText = data.message;
+    }
+    setInterval(fetchData, 3000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Arbitrage Bot Dashboard</h1>
+    <p id="output">Loading...</p>
+  </div>
+</body>
+</html>
